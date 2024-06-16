@@ -45,7 +45,7 @@
 ### 6. 🧠 [Curso de Lógica de Programación](./programming_logic_course)
 - **Descripción:** Domina los fundamentos de la lógica de programación, aprende a resolver problemas utilizando algoritmos y estructuras de control.
 - **Objetivos:** Desarrollar habilidades para pensar de manera algorítmica y resolver problemas de forma eficiente.
-- **Estructura
+- **Estructura:** Desde los conceptos básicos hasta ejercicios prácticos y desafíos avanzados.
 
 ## 🔜 Próximamente
 
