@@ -22,7 +22,7 @@
 - **Objetivos:** Desarrollar habilidades en tecnologías web esenciales y aplicar esos conocimientos en proyectos reales.
 - **Estructura:** Desde la instalación y configuración del entorno hasta la implementación de un proyecto final completo.
 
-### 2. 🧠 [Curso de Ciencia de Datos](./data_science_course)
+### 2. 🧠 [Curso de Ciencia de Datos](./data_science)
 - **Descripción:** Sumérgete en el mundo de la ciencia de datos, aprende a manejar y analizar grandes volúmenes de datos utilizando Python y bibliotecas como Pandas, NumPy y Matplotlib.
 - **Objetivos:** Dominar técnicas de análisis de datos y visualización, y aplicar modelos de machine learning básicos.
 - **Estructura:** Desde la introducción a Python hasta proyectos finales de análisis de datos.
@@ -32,17 +32,17 @@
 - **Objetivos:** Comprender y aplicar conceptos como clases, objetos, herencia y polimorfismo.
 - **Estructura:** Desde los fundamentos de la POO hasta la implementación de un proyecto final aplicando todos los conceptos aprendidos.
 
-### 4. 📱 [Curso de Desarrollo Multiplataforma](./multi_platform_course)
+### 4. 📱 [Curso de Desarrollo Multiplataforma](./multi_platform)
 - **Descripción:** Aprende a desarrollar aplicaciones que funcionen en múltiples plataformas utilizando herramientas como Flutter y Dart.
 - **Objetivos:** Crear aplicaciones móviles y de escritorio con una única base de código.
 - **Estructura:** Desde la configuración del entorno hasta la creación de una aplicación completa.
 
-### 5. 🔄 [Curso de Principios SOLID](./solid_principles_course)
+### 5. 🔄 [Curso de Principios SOLID](./solid_principles)
 - **Descripción:** Aprende los principios SOLID para el diseño de software, y cómo aplicarlos para mejorar la calidad y mantenibilidad del código.
 - **Objetivos:** Entender y aplicar los principios de responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias.
 - **Estructura:** Desde la introducción a SOLID hasta la implementación de un proyecto final aplicando todos los principios.
 
-### 6. 🧠 [Curso de Lógica de Programación](./programming_logic_course)
+### 6. 🧠 [Curso de Lógica de Programación](./programming_logic)
 - **Descripción:** Domina los fundamentos de la lógica de programación, aprende a resolver problemas utilizando algoritmos y estructuras de control.
 - **Objetivos:** Desarrollar habilidades para pensar de manera algorítmica y resolver problemas de forma eficiente.
 - **Estructura:** Desde los conceptos básicos hasta ejercicios prácticos y desafíos avanzados.
