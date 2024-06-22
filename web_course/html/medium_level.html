@@ -1,0 +1,254 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía intermedia de HTML para estudiantes, con ejemplos y desafíos.">
+    <title>Infografía Intermedia de HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            background: #e7e7e7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+    
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    
+        .footer-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+    
+        .footer-content .btn-basic {
+            background-color: #6c757d;
+            color: #fff;
+        }
+    
+        .footer-content .btn-basic:hover {
+            background-color: #5a6268;
+        }
+    
+        .footer-content .btn-intermediate {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+    
+        .footer-content .btn-intermediate:hover {
+            background-color: #138496;
+        }
+    
+        .footer-content .btn-advanced {
+            background-color: #28a745;
+            color: #fff;
+        }
+    
+        .footer-content .btn-advanced:hover {
+            background-color: #218838;
+        }
+        .footer-content .btn-all {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .footer-content .btn-all:hover {
+            background-color: #e0a800;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Infografía Intermedia de HTML</h1>
+        <p>Esta infografía presenta etiquetas HTML de nivel intermedio, con ejemplos y desafíos para los estudiantes.</p>
+
+        <!-- Tablas: Utilizadas para organizar datos en filas y columnas -->
+        <h2>&lt;table&gt; - Tabla</h2>
+        <p>Las tablas se utilizan para organizar datos en filas y columnas.</p>
+        <pre>
+&lt;table&gt;
+    &lt;tr&gt;  &lt;!-- Fila --&gt;
+        &lt;th&gt;Encabezado 1&lt;/th&gt;  &lt;!-- Encabezado de columna --&gt;
+        &lt;th&gt;Encabezado 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;  &lt;!-- Fila --&gt;
+        &lt;td&gt;Dato 1&lt;/td&gt;  &lt;!-- Celda de datos --&gt;
+        &lt;td&gt;Dato 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una tabla con 3 columnas y 3 filas de datos.
+        </div>
+
+        <!-- Formularios: Utilizados para recolectar datos del usuario -->
+        <h2>&lt;form&gt; - Formulario</h2>
+        <p>Los formularios se utilizan para recolectar datos del usuario.</p>
+        <pre>
+&lt;form action="procesar.php" method="post"&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;  &lt;!-- Campo de texto --&gt;
+    &lt;br&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;  &lt;!-- Campo de email --&gt;
+    &lt;br&gt;
+    &lt;input type="submit" value="Enviar"&gt;  &lt;!-- Botón de enviar --&gt;
+&lt;/form&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un formulario con campos para nombre, email y un campo de selección.
+        </div>
+
+        <!-- Videos: Utilizados para insertar videos -->
+        <h2>&lt;video&gt; - Video</h2>
+        <p>La etiqueta <code>&lt;video&gt;</code> se utiliza para insertar videos.</p>
+        <pre>
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;  &lt;!-- Fuente de video --&gt;
+    Tu navegador no soporta la etiqueta de video.
+&lt;/video&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Inserta un video con controles y añade una descripción alternativa.
+        </div>
+
+        <!-- Audio: Utilizados para insertar audio -->
+        <h2>&lt;audio&gt; - Audio</h2>
+        <p>La etiqueta <code>&lt;audio&gt;</code> se utiliza para insertar audio.</p>
+        <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;  &lt;!-- Fuente de audio --&gt;
+    Tu navegador no soporta la etiqueta de audio.
+&lt;/audio&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Inserta un archivo de audio con controles.
+        </div>
+
+        <!-- Secciones: Utilizadas para definir secciones en el contenido -->
+        <h2>&lt;section&gt; - Sección</h2>
+        <p>La etiqueta <code>&lt;section&gt;</code> se utiliza para definir secciones dentro del contenido.</p>
+        <pre>
+&lt;section&gt;
+    &lt;h2&gt;Título de la Sección&lt;/h2&gt;  &lt;!-- Uso: Encabezado de la sección --&gt;
+    &lt;p&gt;Contenido de la sección.&lt;/p&gt;  &lt;!-- Uso: Contenido dentro de la sección --&gt;
+&lt;/section&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una sección con un título y un párrafo de contenido.
+        </div>
+
+        <!-- Artículos: Utilizados para contenido independiente -->
+        <h2>&lt;article&gt; - Artículo</h2>
+        <p>La etiqueta <code>&lt;article&gt;</code> se utiliza para contenido independiente, como un artículo o una entrada de blog.</p>
+        <pre>
+&lt;article&gt;
+    &lt;h2&gt;Título del Artículo&lt;/h2&gt;  &lt;!-- Uso: Encabezado del artículo --&gt;
+    &lt;p&gt;Contenido del artículo.&lt;/p&gt;  &lt;!-- Uso: Texto del artículo --&gt;
+&lt;/article&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un artículo sobre un tema de tu interés.
+        </div>
+
+        <!-- Navegación: Utilizadas para enlaces de navegación -->
+        <h2>&lt;nav&gt; - Navegación</h2>
+        <p>La etiqueta <code>&lt;nav&gt;</code> se utiliza para contener enlaces de navegación.</p>
+        <pre>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;  &lt;!-- Uso: Enlace de navegación --&gt;
+        &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;  &lt;!-- Uso: Otro enlace de navegación --&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una barra de navegación con enlaces a diferentes secciones.
+        </div>
+
+        <!-- Pie de página: Utilizadas para contenido al final de la página -->
+        <h2>&lt;footer&gt; - Pie de Página</h2>
+        <p>La etiqueta <code>&lt;footer&gt;</code> se utiliza para definir el pie de página de un documento o sección.</p>
+        <pre>
+&lt;footer&gt;
+    &lt;p&gt;© 2024 Mi Sitio Web&lt;/p&gt;  &lt;!-- Uso: Información del pie de página --&gt;
+&lt;/footer&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade un pie de página con información de contacto.
+        </div>
+        <p><a href="#top">Volver al inicio</a></p>
+
+
+    </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-basic">Básico</a>
+            <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-intermediate">Intermedio</a>
+            <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-advanced">Avanzado</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses"  target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+
+    </div>
+</footer>
+</html>

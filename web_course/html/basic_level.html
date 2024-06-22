@@ -1,0 +1,332 @@
+<!--
+ Copyright (c) 2024 Abdiel
+
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description"
+            content="Infografía sobre las etiquetas HTML más importantes, con ejemplos y usos comentados." />
+        <title>Infografía de Etiquetas HTML Principales</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+    
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    
+        .footer-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+    
+        .footer-content .btn-basic {
+            background-color: #6c757d;
+            color: #fff;
+        }
+    
+        .footer-content .btn-basic:hover {
+            background-color: #5a6268;
+        }
+    
+        .footer-content .btn-intermediate {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+    
+        .footer-content .btn-intermediate:hover {
+            background-color: #138496;
+        }
+    
+        .footer-content .btn-advanced {
+            background-color: #28a745;
+            color: #fff;
+        }
+    
+        .footer-content .btn-advanced:hover {
+            background-color: #218838;
+        }
+        .footer-content .btn-all {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .footer-content .btn-all:hover {
+            background-color: #e0a800;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 id="top">Infografía de Etiquetas HTML Principales</h1>
+            <p>
+                Este documento presenta algunas de las etiquetas HTML más
+                utilizadas,
+                junto con ejemplos y casos de uso comentados en el código.
+            </p>
+
+            <!-- Encabezados: Utilizados para títulos y subtítulos -->
+            <h2 id="encabezados">&lt;h1&gt; a &lt;h6&gt; - Encabezados</h2>
+            <p>
+                Los encabezados son utilizados para definir títulos y
+                subtítulos, con
+                <code>&lt;h1&gt;</code> siendo el más importante y
+                <code>&lt;h6&gt;</code> el menos importante.
+            </p>
+            <pre>
+&lt;h1&gt;Título Principal&lt;/h1&gt;  <!-- Uso: Título principal de la página -->
+&lt;h2&gt;Subtítulo 1&lt;/h2&gt;        <!-- Uso: Subtítulo de sección -->
+&lt;h3&gt;Subtítulo 2&lt;/h3&gt;        <!-- Uso: Subtítulo de subsección -->
+&lt;h4&gt;Subtítulo 3&lt;/h4&gt;        <!-- Uso: Subtítulo de sub-subsección -->
+&lt;h5&gt;Subtítulo 4&lt;/h5&gt;        <!-- Uso: Subtítulo menos importante -->
+&lt;h6&gt;Subtítulo 5&lt;/h6&gt;        <!-- Uso: Subtítulo de menor importancia -->
+        </pre>
+            <!-- Desafío: Crea una estructura de página con un título principal y varios subtítulos -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Crea una estructura de página con un
+                título principal y varios subtítulos.
+            </div>
+
+            <!-- Párrafos: Utilizados para bloques de texto -->
+            <h2 id="parrafos">&lt;p&gt; - Párrafo</h2>
+            <p>
+                La etiqueta <code>&lt;p&gt;</code> se utiliza para definir
+                párrafos.
+            </p>
+            <pre>
+&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;  <!-- Uso: Bloque de texto en el contenido -->
+        </pre>
+            <!-- Desafío: Añade tres párrafos de texto sobre cualquier tema -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Añade tres párrafos de texto sobre
+                cualquier tema.
+            </div>
+
+            <!-- Enlaces: Utilizados para crear hipervínculos -->
+            <h2 id="enlaces">&lt;a&gt; - Enlace</h2>
+            <p>
+                La etiqueta <code>&lt;a&gt;</code> se utiliza para definir
+                hipervínculos.
+            </p>
+            <pre>
+&lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo&lt;/a&gt;  <!-- Uso: Crear un enlace a otra página -->
+&lt;a href="pagina.html"&gt;Enlace Relativo&lt;/a&gt;  <!-- Uso: Crear un enlace a una página relativa -->
+        </pre>
+            <!-- Desafío: Crea enlaces a tres sitios web diferentes -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Crea enlaces a tres sitios web
+                diferentes.
+            </div>
+
+            <!-- Imágenes: Utilizadas para insertar imágenes -->
+            <h2 id="imagenes">&lt;img&gt; - Imagen</h2>
+            <p>
+                La etiqueta <code>&lt;img&gt;</code> se utiliza para insertar
+                imágenes.
+            </p>
+            <pre>
+&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;  <!-- Uso: Insertar una imagen con una descripción -->
+        </pre>
+            <!-- Desafío: Inserta una imagen con una descripción alternativa adecuada -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Inserta una imagen con una descripción
+                alternativa adecuada.
+            </div>
+
+            <!-- Listas: Utilizadas para crear listas ordenadas y no ordenadas -->
+            <h2 id="listas">&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; - Listas</h2>
+            <p>
+                Las etiquetas <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>
+                se
+                utilizan para listas no ordenadas y ordenadas, respectivamente.
+                <code>&lt;li&gt;</code> define cada elemento de la lista.
+            </p>
+            <pre>
+&lt;ul&gt; <!-- Lista no ordenada -->
+    &lt;li&gt;Elemento 1&lt;/li&gt;  <!-- Uso: Elemento de lista -->
+    &lt;li&gt;Elemento 2&lt;/li&gt;  <!-- Uso: Otro elemento de lista -->
+&lt;/ul&gt;
+
+&lt;ol&gt; <!-- Lista ordenada -->
+    &lt;li&gt;Elemento 1&lt;/li&gt;  <!-- Uso: Primer elemento de lista -->
+    &lt;li&gt;Elemento 2&lt;/li&gt;  <!-- Uso: Segundo elemento de lista -->
+&lt;/ol&gt;
+        </pre>
+            <!-- Desafío: Crea una lista no ordenada con al menos cinco elementos y una lista ordenada con tres elementos -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Crea una lista no ordenada con al menos
+                cinco elementos y una lista ordenada con tres elementos.
+            </div>
+            <!-- Divisiones: Utilizadas para agrupar elementos -->
+            <h2 id="divisiones">&lt;div&gt; - División</h2>
+            <p>
+                La etiqueta <code>&lt;div&gt;</code> se utiliza para agrupar y
+                estructurar otros elementos en un contenedor.
+            </p>
+            <pre>
+&lt;div&gt;
+    &lt;p&gt;Contenido dentro de una división.&lt;/p&gt;  <!-- Uso: Agrupación de elementos -->
+&lt;/div&gt;
+        </pre>
+            <!-- Desafío: Agrupa varios párrafos en una división -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Agrupa varios párrafos en una división.
+            </div>
+
+            <!-- Secciones: Utilizadas para definir secciones en el contenido -->
+            <h2 id="secciones">&lt;section&gt; - Sección</h2>
+            <p>
+                La etiqueta <code>&lt;section&gt;</code> se utiliza para definir
+                secciones dentro del contenido.
+            </p>
+            <pre>
+&lt;section&gt;
+    &lt;h2&gt;Título de la Sección&lt;/h2&gt;  <!-- Uso: Encabezado de la sección -->
+    &lt;p&gt;Contenido de la sección.&lt;/p&gt;  <!-- Uso: Contenido dentro de la sección -->
+&lt;/section&gt;
+        </pre>
+            <!-- Desafío: Crea una sección con un título y contenido relevante -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Crea una sección con un título y
+                contenido relevante.
+            </div>
+
+
+            <!-- Artículos: Utilizadas para contenido independiente -->
+            <h2 id="articulos">&lt;article&gt; - Artículo</h2>
+            <p>
+                La etiqueta <code>&lt;article&gt;</code> se utiliza para
+                contenido
+                independiente, como un artículo o una entrada de blog.
+            </p>
+            <pre>
+&lt;article&gt;
+    &lt;h2&gt;Título del Artículo&lt;/h2&gt;  <!-- Uso: Encabezado del artículo -->
+    &lt;p&gt;Contenido del artículo.&lt;/p&gt;  <!-- Uso: Texto del artículo -->
+&lt;/article&gt;
+        </pre>
+            <!-- Desafío: Escribe un artículo corto sobre un tema de tu elección -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Escribe un artículo corto sobre un tema
+                de tu elección.
+            </div>
+
+
+            <!-- Navegación: Utilizadas para enlaces de navegación -->
+            <h2 id="navegacion">&lt;nav&gt; - Navegación</h2>
+            <p>
+                La etiqueta <code>&lt;nav&gt;</code> se utiliza para contener
+                enlaces de
+                navegación.
+            </p>
+            <pre>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;  <!-- Uso: Enlace de navegación -->
+        &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;  <!-- Uso: Otro enlace de navegación -->
+    &lt;/ul&gt;
+&lt;/nav&gt;
+        </pre>
+            <!-- Desafío: Crea un menú de navegación con enlaces a diferentes secciones de la página -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Crea un menú de navegación con enlaces
+                a diferentes secciones de la página.
+            </div>
+
+
+            <!-- Pie de página: Utilizadas para contenido al final de la página -->
+            <h2 id="pie-de-pagina">&lt;footer&gt; - Pie de Página</h2>
+            <p>
+                La etiqueta <code>&lt;footer&gt;</code> se utiliza para definir
+                el pie
+                de página de un documento o sección.
+            </p>
+            <pre>
+&lt;footer&gt;
+    &lt;p&gt;© 2024 Mi Sitio Web&lt;/p&gt;  <!-- Uso: Información del pie de página -->
+&lt;/footer&gt;
+        </pre>
+            <!-- Desafío: Añade un pie de página con información de contacto -->
+            <div class="challenge">
+                <strong>Desafío:</strong> Añade un pie de página con información
+                de contacto.
+            </div>
+
+
+            <p><a href="#top">Volver al inicio</a></p>
+        </div>
+    </body>
+    <footer>
+        <div class="footer-content">
+            <p>
+                ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+            </p>
+            <p>
+                <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-basic">Básico</a>
+                <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-intermediate">Intermedio</a>
+                <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-advanced">Avanzado</a>
+            </p>
+            <p>
+                <a href="https://github.com/abdielLopezpy/courses"  target="_blank" class="btn btn-all">Todos los Cursos</a>
+            </p>
+            <p>
+                Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+            </p>
+    
+        </div>
+    </footer>
+    
+</html>

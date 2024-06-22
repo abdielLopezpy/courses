@@ -1,0 +1,255 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía avanzada de HTML para estudiantes, con ejemplos y desafíos.">
+    <title>Infografía Avanzada de HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            background: #e7e7e7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+    
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    
+        .footer-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+    
+        .footer-content .btn-basic {
+            background-color: #6c757d;
+            color: #fff;
+        }
+    
+        .footer-content .btn-basic:hover {
+            background-color: #5a6268;
+        }
+    
+        .footer-content .btn-intermediate {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+    
+        .footer-content .btn-intermediate:hover {
+            background-color: #138496;
+        }
+    
+        .footer-content .btn-advanced {
+            background-color: #28a745;
+            color: #fff;
+        }
+    
+        .footer-content .btn-advanced:hover {
+            background-color: #218838;
+        }
+        .footer-content .btn-all {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .footer-content .btn-all:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Infografía Avanzada de HTML</h1>
+        <p>Esta infografía presenta etiquetas HTML avanzadas, con ejemplos y desafíos para los estudiantes.</p>
+
+        <!-- Canvas: Utilizado para gráficos y animaciones -->
+        <h2>&lt;canvas&gt; - Canvas</h2>
+        <p>La etiqueta <code>&lt;canvas&gt;</code> se utiliza para dibujar gráficos y animaciones mediante JavaScript.</p>
+        <pre>
+&lt;canvas id="miCanvas" width="300" height="200"&gt;
+    Tu navegador no soporta la etiqueta de canvas.
+&lt;/canvas&gt;
+&lt;script&gt;
+    var canvas = document.getElementById('miCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(10, 10, 150, 100);
+&lt;/script&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Dibuja un círculo en el canvas.
+        </div>
+
+        <!-- SVG: Utilizado para gráficos vectoriales -->
+        <h2>&lt;svg&gt; - SVG</h2>
+        <p>La etiqueta <code>&lt;svg&gt;</code> se utiliza para definir gráficos vectoriales.</p>
+        <pre>
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un gráfico SVG con varias formas geométricas.
+        </div>
+
+        <!-- Plantillas: Utilizadas para definir contenido reutilizable -->
+        <h2>&lt;template&gt; - Plantilla</h2>
+        <p>La etiqueta <code>&lt;template&gt;</code> se utiliza para definir fragmentos de contenido reutilizable que pueden ser clonados e insertados en el DOM.</p>
+        <pre>
+&lt;template id="miPlantilla"&gt;
+    &lt;p&gt;Este es un párrafo dentro de una plantilla.&lt;/p&gt;
+&lt;/template&gt;
+&lt;script&gt;
+    var plantilla = document.getElementById('miPlantilla');
+    var clon = plantilla.content.cloneNode(true);
+    document.body.appendChild(clon);
+&lt;/script&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una plantilla que incluya una lista de elementos.
+        </div>
+
+        <!-- Elementos de Medios de Comunicación -->
+        <h2>&lt;picture&gt; - Imagen Adaptable</h2>
+        <p>La etiqueta <code>&lt;picture&gt;</code> se utiliza para definir una imagen adaptable que cambia según el tamaño de la pantalla o el dispositivo.</p>
+        <pre>
+&lt;picture&gt;
+    &lt;source media="(min-width: 650px)" srcset="img_grande.jpg"&gt;
+    &lt;source media="(min-width: 465px)" srcset="img_mediana.jpg"&gt;
+    &lt;img src="img_pequena.jpg" alt="Imagen adaptable"&gt;
+&lt;/picture&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Implementa una imagen adaptable con tres diferentes tamaños.
+        </div>
+
+        <!-- Datos Enriquecidos: Microdata para SEO -->
+        <h2>Microdata - Datos Enriquecidos</h2>
+        <p>Utiliza microdata para mejorar el SEO de tu página web añadiendo información estructurada.</p>
+        <pre>
+&lt;div itemscope itemtype="http://schema.org/Person"&gt;
+    &lt;span itemprop="name"&gt;John Doe&lt;/span&gt;
+    &lt;div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;
+        &lt;span itemprop="streetAddress"&gt;123 Main St&lt;/span&gt;
+        &lt;span itemprop="addressLocality"&gt;Springfield&lt;/span&gt;
+        &lt;span itemprop="addressRegion"&gt;IL&lt;/span&gt;
+        &lt;span itemprop="postalCode"&gt;62701&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span itemprop="telephone"&gt;(555) 555-5555&lt;/span&gt;
+&lt;/div&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade microdata a un perfil de producto con nombre, descripción y precio.
+        </div>
+
+        <!-- Elementos Interactivos: Detalles y Resúmenes -->
+        <h2>&lt;details&gt; y &lt;summary&gt; - Detalles y Resumen</h2>
+        <p>Las etiquetas <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code> se utilizan para crear secciones de contenido que el usuario puede expandir y contraer.</p>
+        <pre>
+&lt;details&gt;
+    &lt;summary&gt;Más Información&lt;/summary&gt;
+    &lt;p&gt;Aquí hay más detalles que se pueden mostrar u ocultar.&lt;/p&gt;
+&lt;/details&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una sección de preguntas frecuentes usando detalles y resumen.
+        </div>
+
+        <!-- Importaciones de Documentos Externos -->
+        <h2>&lt;iframe&gt; - Marco en Línea</h2>
+        <p>La etiqueta <code>&lt;iframe&gt;</code> se utiliza para incrustar otro documento HTML dentro de la página actual.</p>
+        <pre>
+&lt;iframe src="https://www.ejemplo.com" width="600" height="400"&gt;
+    Tu navegador no soporta iframes.
+&lt;/iframe&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Incrusta un video de YouTube usando un iframe.
+        </div>
+
+        <!-- Elementos de Metadatos -->
+        <h2>&lt;meta&gt; - Metadatos</h2>
+        <p>La etiqueta <code>&lt;meta&gt;</code> se utiliza para definir metadatos sobre el documento HTML, como la descripción, palabras clave y autor.</p>
+        <pre>
+&lt;meta name="description" content="Esta es una descripción de mi página web."&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+&lt;meta name="author" content="Tu Nombre"&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade metadatos a tu documento HTML.
+        </div>
+        <p><a href="#top">Volver al inicio</a></p>
+
+
+    </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-basic">Básico</a>
+            <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-intermediate">Intermedio</a>
+            <a href="https://github.com/abdielLopezpy/courses/tree/main/web_course" target="_blank" class="btn btn-advanced">Avanzado</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses"  target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+
+    </div>
+</footer>
+</html>
