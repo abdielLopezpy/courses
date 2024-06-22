@@ -1,0 +1,182 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Infografía sobre JavaScript avanzado, con ejemplos y usos comentados." />
+    <title>Infografía de JavaScript Avanzado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="top">Infografía de JavaScript Avanzado</h1>
+        <p>
+            Este documento presenta conceptos avanzados de JavaScript, incluyendo clases, módulos, manejo de errores, y uso de APIs modernas.
+        </p>
+
+        <!-- Clases y Módulos: Uso de clases y módulos en JavaScript -->
+        <h2 id="clases-modulos">Clases y Módulos</h2>
+        <p>
+            JavaScript soporta la definición de clases y el uso de módulos para organizar y reutilizar código de manera eficiente.
+        </p>
+        <pre>
+// Definición de una clase en JavaScript
+class Persona {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+
+    saludar() {
+        return `Hola, soy ${this.nombre}`;
+    }
+}
+
+// Uso de módulos para exportar e importar clases
+// persona.js
+export default Persona;
+
+// main.js
+import Persona from './persona.js';
+
+const persona = new Persona('Juan');
+console.log(persona.saludar());  // Salida: Hola, soy Juan
+        </pre>
+        <!-- Desafío: Define una clase avanzada con métodos y utiliza módulos para organizar tu código -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Define una clase avanzada con métodos y utilízala en un módulo separado para importarla en tu archivo principal.
+        </div>
+
+        <!-- Manejo de Errores: Utilizando try-catch para manejar excepciones -->
+        <h2 id="manejo-errores">Manejo de Errores</h2>
+        <p>
+            JavaScript permite manejar errores de manera efectiva usando el bloque try-catch para capturar excepciones.
+        </p>
+        <pre>
+try {
+    // Bloque de código que puede lanzar una excepción
+    throw new Error('Este es un error personalizado');
+} catch (error) {
+    // Captura y manejo de la excepción
+    console.error('Error:', error.message);
+}
+        </pre>
+        <!-- Desafío: Crea una función que lance y maneje una excepción -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una función que intencionalmente lance una excepción y utiliza try-catch para manejarla.
+        </div>
+
+        <!-- Uso de APIs Modernas: Ejemplo de uso de una API moderna -->
+        <h2 id="api-moderna">Uso de APIs Modernas</h2>
+        <p>
+            JavaScript puede interactuar con APIs modernas, como la API Fetch para realizar peticiones HTTP asincrónicas.
+        </p>
+        <pre>
+// Ejemplo de uso de la API Fetch para obtener datos de un servidor
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error al obtener datos:', error));
+        </pre>
+        <!-- Desafío: Utiliza la API Fetch para obtener y mostrar datos desde una API pública -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Utiliza la API Fetch para realizar una petición GET a una API pública y muestra los resultados en tu página.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses" target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+    </div>
+</footer>
+
+</html>

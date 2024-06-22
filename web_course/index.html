@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Introducción a HTML, CSS y JavaScript con ejemplos prácticos.">
+    <title>Introducción a HTML, CSS y JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        pre {
+            background: #e7e7e7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .example {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2196f3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #1976d2;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Introducción a HTML, CSS y JavaScript</h1>
+        <p>
+            En esta guía, aprenderás los conceptos básicos de HTML, CSS y JavaScript con ejemplos prácticos.
+            HTML (HyperText Markup Language) se utiliza para crear la estructura de una página web, 
+            CSS (Cascading Style Sheets) se utiliza para estilizar y diseñar la página web, 
+            y JavaScript se utiliza para añadir interactividad.
+        </p>
+
+        <!-- Introducción a HTML -->
+        <h2>HTML Básico</h2>
+        <p>HTML utiliza "etiquetas" para estructurar el contenido. Aquí tienes algunas etiquetas HTML básicas:</p>
+
+        <!-- Etiquetas de Encabezado -->
+        <h3>Encabezados (&lt;h1&gt; a &lt;h6&gt;)</h3>
+        <p>Los encabezados se utilizan para títulos y subtítulos, desde el más importante (&lt;h1&gt;) hasta el menos importante (&lt;h6&gt;).</p>
+        <pre>
+&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo 1&lt;/h2&gt;
+&lt;h3&gt;Subtítulo 2&lt;/h3&gt;
+        </pre>
+        <div class="example">
+            <h1>Título Principal</h1>
+            <h2>Subtítulo 1</h2>
+            <h3>Subtítulo 2</h3>
+        </div>
+
+        <!-- Introducción a CSS -->
+        <h2>CSS Básico</h2>
+        <p>CSS se utiliza para estilizar y diseñar una página web. Aquí tienes algunas propiedades CSS básicas:</p>
+
+        <!-- Propiedad de Color -->
+        <h3>Color</h3>
+        <p>La propiedad <code>color</code> se utiliza para cambiar el color del texto.</p>
+        <pre>
+p {
+    color: blue; /* El texto será azul */
+}
+        </pre>
+        <div class="example">
+            <p style="color: blue;">Este texto es azul.</p>
+        </div>
+
+        <!-- Propiedad de Fondo -->
+        <h3>Fondo</h3>
+        <p>La propiedad <code>background-color</code> se utiliza para cambiar el color de fondo de un elemento.</p>
+        <pre>
+div {
+    background-color: yellow; /* El fondo será amarillo */
+}
+        </pre>
+        <div class="example" style="background-color: yellow;">
+            <p>Este div tiene un fondo amarillo.</p>
+        </div>
+
+        <!-- Introducción a JavaScript -->
+        <h2>JavaScript Básico</h2>
+        <p>JavaScript se utiliza para añadir interactividad a una página web. Aquí tienes un ejemplo básico:</p>
+
+        <!-- Botón de Ejemplo -->
+        <h3>Botón Interactivo</h3>
+        <p>En este ejemplo, usaremos JavaScript para mostrar un mensaje cuando se haga clic en un botón.</p>
+        <pre>
+&lt;button class="btn" onclick="mostrarMensaje()"&gt;Haz clic aquí&lt;/button&gt;
+
+&lt;script&gt;
+function mostrarMensaje() {
+    alert('¡Hola! Has hecho clic en el botón.');
+}
+&lt;/script&gt;
+        </pre>
+        <div class="example">
+            <button class="btn" onclick="mostrarMensaje()">Haz clic aquí</button>
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+    <script>
+        function mostrarMensaje() {
+            alert('¡Hola! Has hecho clic en el botón.');
+        }
+    </script>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>¡Has completado esta introducción a HTML y CSS! Espero que hayas aprendido mucho.</p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+    </div>
+</footer>
+
+
+</html>

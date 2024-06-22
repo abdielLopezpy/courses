@@ -1,0 +1,170 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diferentes formas de incluir CSS en HTML con ejemplos prácticos.">
+    <title>Diferentes formas de incluir CSS en HTML</title>
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* CSS Interno */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        pre {
+            background: #e7e7e7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .example {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Diferentes formas de incluir CSS en HTML</h1>
+        <p>Existen tres formas principales de incluir CSS en un documento HTML:</p>
+        <ul>
+            <li>CSS Externo</li>
+            <li>CSS Interno</li>
+            <li>CSS En-línea</li>
+        </ul>
+
+        <!-- CSS Externo -->
+        <h2>CSS Externo</h2>
+        <p>
+            El CSS externo se coloca en un archivo separado con la extensión <code>.css</code>.
+            Este archivo se enlaza al documento HTML usando la etiqueta <code>&lt;link&gt;</code> dentro del <code>&lt;head&gt;</code>.
+        </p>
+        <pre>
+&lt;!-- Archivo HTML --&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+
+&lt;!-- Archivo CSS (styles.css) --&gt;
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+        </pre>
+        <div class="example">
+            <p>Este ejemplo muestra cómo enlazar un archivo CSS externo.</p>
+        </div>
+
+        <!-- CSS Interno -->
+        <h2>CSS Interno</h2>
+        <p>
+            El CSS interno se coloca dentro de la etiqueta <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code> del documento HTML.
+        </p>
+        <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+        </pre>
+        <div class="example">
+            <p>Este ejemplo muestra cómo incluir CSS directamente en el documento HTML usando la etiqueta <code>&lt;style&gt;</code>.</p>
+        </div>
+
+        <!-- CSS En-línea -->
+        <h2>CSS En-línea</h2>
+        <p>
+            El CSS en-línea se coloca directamente dentro de un elemento HTML usando el atributo <code>style</code>.
+        </p>
+        <pre>
+&lt;p style="color: blue; background-color: yellow;"&gt;
+    Este es un párrafo con estilo en-línea.
+&lt;/p&gt;
+        </pre>
+        <div class="example">
+            <p style="color: blue; background-color: yellow;">
+                Este es un párrafo con estilo en-línea.
+            </p>
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>¡Has aprendido las diferentes formas de incluir CSS en HTML! Espero que hayas encontrado útil esta información.</p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses" target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,182 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Infografía sobre JavaScript intermedio, con ejemplos y usos comentados." />
+    <title>Infografía de JavaScript Intermedio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="top">Infografía de JavaScript Intermedio</h1>
+        <p>
+            Este documento presenta conceptos más avanzados de JavaScript, junto con ejemplos y casos de uso comentados en el código.
+        </p>
+
+        <!-- Funciones Avanzadas: Funciones flecha, funciones de alto orden -->
+        <h2 id="funciones-avanzadas">Funciones Avanzadas</h2>
+        <p>
+            JavaScript soporta funciones avanzadas como funciones flecha y funciones de alto orden.
+        </p>
+        <pre>
+// Función flecha
+const suma = (a, b) => a + b;
+
+// Función de alto orden
+function operacionMatematica(a, b, operacion) {
+    return operacion(a, b);
+}
+
+console.log(operacionMatematica(5, 3, suma));  // Salida: 8
+        </pre>
+        <!-- Desafío: Utiliza una función flecha y una función de alto orden -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Define una función flecha que calcule el cuadrado de un número y utilízala en una función de alto orden que procese una lista de números.
+        </div>
+
+        <!-- Manipulación del DOM: Modificando elementos HTML -->
+        <h2 id="manipulacion-dom">Manipulación del DOM</h2>
+        <p>
+            JavaScript permite manipular el DOM para modificar elementos HTML dinámicamente.
+        </p>
+        <pre>
+// Obtener un elemento por su ID
+const titulo = document.getElementById('titulo');
+
+// Modificar el contenido del elemento
+titulo.textContent = 'Nuevo Título';
+
+// Crear un nuevo elemento y añadirlo al DOM
+const parrafo = document.createElement('p');
+parrafo.textContent = 'Este es un nuevo párrafo';
+document.body.appendChild(parrafo);
+        </pre>
+        <!-- Desafío: Modifica el contenido de un elemento y crea uno nuevo -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Modifica el contenido de un elemento HTML existente y crea un nuevo elemento para ser añadido al documento.
+        </div>
+
+        <!-- Eventos Avanzados: Delegación de eventos, eventos personalizados -->
+        <h2 id="eventos-avanzados">Eventos Avanzados</h2>
+        <p>
+            JavaScript también permite utilizar técnicas avanzadas de eventos como la delegación de eventos y eventos personalizados.
+        </p>
+        <pre>
+// Delegación de eventos
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton')) {
+        console.log('Botón clicado');
+    }
+});
+
+// Eventos personalizados
+const miEvento = new CustomEvent('miEvento', { detail: { mensaje: 'Evento personalizado' } });
+document.dispatchEvent(miEvento);
+document.addEventListener('miEvento', function(event) {
+    console.log(event.detail.mensaje);
+});
+        </pre>
+        <!-- Desafío: Utiliza delegación de eventos y crea un evento personalizado -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Utiliza delegación de eventos para manejar clics en varios botones y crea un evento personalizado con un mensaje.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses" target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+    </div>
+</footer>
+
+</html>

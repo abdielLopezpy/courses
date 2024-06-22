@@ -1,0 +1,240 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Infografía avanzada sobre propiedades CSS, incluyendo animaciones, transiciones y el modelo de cajas." />
+    <title>Infografía Avanzada de Propiedades CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header-content h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .header-content a:hover {
+            color: #e0a800;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="content">
+        <h1 id="top">Infografía Avanzada de Propiedades CSS</h1>
+        <p>
+            Este documento presenta propiedades avanzadas de CSS, incluyendo animaciones, transiciones y el modelo de cajas, con ejemplos prácticos y desafíos.
+        </p>
+
+        <!-- Transiciones: Utilizadas para suavizar cambios de estilos -->
+        <h2 id="transiciones">transition - Transiciones</h2>
+        <p>
+            La propiedad <code>transition</code> se utiliza para suavizar los cambios de estilos de los elementos.
+        </p>
+        <pre>
+.elemento {
+    transition: all 0.3s ease-in-out;  /* Uso: Suaviza todos los cambios de estilo en 0.3 segundos */
+}
+
+.elemento:hover {
+    background-color: #ffc107;  /* Cambio de color de fondo al pasar el ratón */
+}
+        </pre>
+        <!-- Desafío: Añade una transición suave a un botón -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade una transición suave a un botón.
+        </div>
+
+        <!-- Animaciones: Utilizadas para animar los elementos -->
+        <h2 id="animaciones">animation - Animaciones</h2>
+        <p>
+            La propiedad <code>animation</code> se utiliza para crear animaciones CSS.
+        </p>
+        <pre>
+@keyframes ejemplo {
+    from { transform: scale(1); }
+    to { transform: scale(1.5); }
+}
+
+.elemento {
+    animation: ejemplo 1s infinite alternate;  /* Uso: Animación de escalado infinito */
+}
+        </pre>
+        <!-- Desafío: Crea una animación que cambie el tamaño de un elemento -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una animación que cambie el tamaño de un elemento.
+        </div>
+
+        <!-- Modelo de cajas: Utilizado para controlar el tamaño y espaciado de los elementos -->
+        <h2 id="modelo-cajas">box-sizing - Modelo de Cajas</h2>
+        <p>
+            La propiedad <code>box-sizing</code> se utiliza para controlar el tamaño y el espaciado de los elementos.
+        </p>
+        <pre>
+.elemento {
+    box-sizing: border-box;  /* Uso: Incluye el padding y el borde en el tamaño total del elemento */
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #333;
+}
+        </pre>
+        <!-- Desafío: Ajusta el tamaño de un elemento utilizando el modelo de cajas -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Ajusta el tamaño de un elemento utilizando el modelo de cajas.
+        </div>
+
+        <!-- Flexbox Avanzado: Control avanzado del diseño flexible -->
+        <h2 id="flexbox-avanzado">Flexbox Avanzado</h2>
+        <p>
+            Propiedades avanzadas de <code>flexbox</code> para un control más detallado del diseño flexible.
+        </p>
+        <pre>
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;  /* Uso: Permite a los elementos flexibles envolver a una nueva línea */
+    gap: 20px;
+}
+
+.elemento {
+    flex: 1 1 200px;  /* Uso: Elementos flexibles con un tamaño mínimo de 200px */
+}
+        </pre>
+        <!-- Desafío: Crea un contenedor flexible avanzado con elementos envolventes -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un contenedor flexible avanzado con elementos envolventes.
+        </div>
+
+        <!-- Grillas Avanzadas: Diseño de grillas avanzado -->
+        <h2 id="grillas-avanzadas">Grillas Avanzadas</h2>
+        <p>
+            Propiedades avanzadas de <code>grid</code> para un diseño de grillas más complejo.
+        </p>
+        <pre>
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Uso: Columnas adaptables con un tamaño mínimo */
+    gap: 20px;
+}
+
+.elemento {
+    grid-column: span 2;  /* Uso: Elemento que ocupa dos columnas */
+}
+        </pre>
+        <!-- Desafío: Crea una grilla avanzada con elementos que ocupen múltiples columnas -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una grilla avanzada con elementos que ocupen múltiples columnas.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>
+                ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+            </p>
+            <p>
+                Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+            </p>
+            <p>
+                <a href="https://github.com/abdielLopezpy/courses" target="_blank" class="btn btn-all">Todos los Cursos</a>
+            </p>
+    
+        </div>
+    </footer>
+</body>
+
+</html>

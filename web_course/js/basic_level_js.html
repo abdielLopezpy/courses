@@ -1,0 +1,204 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Infografía sobre conceptos básicos de JavaScript, con ejemplos y usos comentados." />
+    <title>Infografía de JavaScript Básico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="top">Infografía de JavaScript Básico</h1>
+        <p>
+            Este documento presenta algunos de los conceptos básicos de JavaScript, junto con ejemplos y casos de uso comentados en el código.
+        </p>
+
+        <!-- Variables: Utilizadas para almacenar datos -->
+        <h2 id="variables">Variables</h2>
+        <p>
+            En JavaScript, las variables se utilizan para almacenar datos. Puedes declarar una variable usando <code>var</code>, <code>let</code> o <code>const</code>.
+        </p>
+        <pre>
+<!-- Uso de var -->
+var nombre = 'Juan';
+console.log(nombre);  // Salida: Juan
+
+<!-- Uso de let -->
+let edad = 25;
+console.log(edad);  // Salida: 25
+
+<!-- Uso de const -->
+const ciudad = 'Madrid';
+console.log(ciudad);  // Salida: Madrid
+        </pre>
+        <!-- Desafío: Declara variables usando var, let y const -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Declara tres variables usando <code>var</code>, <code>let</code> y <code>const</code> y muestra sus valores en la consola.
+        </div>
+
+        <!-- Tipos de Datos: Diferentes tipos de datos en JavaScript -->
+        <h2 id="tipos-de-datos">Tipos de Datos</h2>
+        <p>
+            JavaScript soporta varios tipos de datos, incluidos <code>números</code>, <code>cadenas de texto</code>, <code>booleanos</code>, <code>objetos</code> y <code>arrays</code>.
+        </p>
+        <pre>
+let numero = 10;  // Número
+let texto = 'Hola Mundo';  // Cadena de texto
+let booleano = true;  // Booleano
+let objeto = { nombre: 'Juan', edad: 25 };  // Objeto
+let array = [1, 2, 3, 4, 5];  // Array
+        </pre>
+        <!-- Desafío: Declara variables de diferentes tipos de datos -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Declara una variable de cada tipo de dato (número, cadena de texto, booleano, objeto y array) y muestra sus valores en la consola.
+        </div>
+
+        <!-- Operadores: Realizando operaciones con JavaScript -->
+        <h2 id="operadores">Operadores</h2>
+        <p>
+            Los operadores en JavaScript se utilizan para realizar operaciones en variables y valores.
+        </p>
+        <pre>
+let a = 10;
+let b = 5;
+
+let suma = a + b;  // Suma
+let resta = a - b;  // Resta
+let multiplicacion = a * b;  // Multiplicación
+let division = a / b;  // División
+console.log(suma, resta, multiplicacion, division);  // Salida: 15, 5, 50, 2
+        </pre>
+        <!-- Desafío: Realiza operaciones aritméticas -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Declara dos variables y realiza operaciones de suma, resta, multiplicación y división, mostrando los resultados en la consola.
+        </div>
+
+        <!-- Funciones: Definiendo y utilizando funciones -->
+        <h2 id="funciones">Funciones</h2>
+        <p>
+            Las funciones en JavaScript se utilizan para definir bloques de código que pueden ser llamados y ejecutados en cualquier momento.
+        </p>
+        <pre>
+function saludar(nombre) {
+    return 'Hola, ' + nombre;
+}
+console.log(saludar('Juan'));  // Salida: Hola, Juan
+        </pre>
+        <!-- Desafío: Define y llama una función -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Define una función que tome un parámetro y retorne un saludo. Llama a esta función y muestra el resultado en la consola.
+        </div>
+
+        <!-- Eventos: Respondiendo a eventos del usuario -->
+        <h2 id="eventos">Eventos</h2>
+        <p>
+            JavaScript puede responder a eventos del usuario, como clics, teclas presionadas, y más.
+        </p>
+        <pre>
+<!-- HTML -->
+<button id="miBoton">Haz clic aquí</button>
+
+<!-- JavaScript -->
+<script>
+document.getElementById('miBoton').addEventListener('click', function() {
+    alert('¡Botón clicado!');
+});
+</script>
+        </pre>
+        <!-- Desafío: Añade un manejador de eventos a un botón -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade un manejador de eventos a un botón que muestre una alerta cuando se haga clic en él.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses" target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+    </div>
+</footer>
+
+</html>

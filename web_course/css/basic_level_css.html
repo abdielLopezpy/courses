@@ -1,0 +1,205 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Infografía sobre las propiedades CSS más importantes, con ejemplos y usos comentados." />
+    <title>Infografía de Propiedades CSS Principales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ffc107;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="top">Infografía de Propiedades CSS Principales</h1>
+        <p>
+            Este documento presenta algunas de las propiedades CSS más utilizadas,
+            junto con ejemplos y casos de uso comentados en el código.
+        </p>
+
+        <!-- Colores: Utilizados para definir colores de texto y fondo -->
+        <h2 id="colores">color, background-color - Colores</h2>
+        <p>
+            Las propiedades <code>color</code> y <code>background-color</code> se utilizan para definir los colores del texto y del fondo, respectivamente.
+        </p>
+        <pre>
+.elemento {
+    color: #333;  /* Uso: Color del texto */
+    background-color: #f4f4f4;  /* Uso: Color de fondo */
+}
+        </pre>
+        <!-- Desafío: Cambia el color del texto y el fondo de un elemento -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Cambia el color del texto y el fondo de un elemento.
+        </div>
+
+        <!-- Fuentes: Utilizadas para definir la apariencia del texto -->
+        <h2 id="fuentes">font-family, font-size, font-weight - Fuentes</h2>
+        <p>
+            Las propiedades <code>font-family</code>, <code>font-size</code> y <code>font-weight</code> se utilizan para definir la apariencia del texto.
+        </p>
+        <pre>
+.elemento {
+    font-family: Arial, sans-serif;  /* Uso: Tipo de fuente */
+    font-size: 16px;  /* Uso: Tamaño de la fuente */
+    font-weight: bold;  /* Uso: Grosor de la fuente */
+}
+        </pre>
+        <!-- Desafío: Aplica diferentes estilos de fuente a un párrafo -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Aplica diferentes estilos de fuente a un párrafo.
+        </div>
+
+        <!-- Bordes: Utilizados para definir los bordes de un elemento -->
+        <h2 id="bordes">border - Bordes</h2>
+        <p>
+            La propiedad <code>border</code> se utiliza para definir los bordes de un elemento.
+        </p>
+        <pre>
+.elemento {
+    border: 1px solid #333;  /* Uso: Borde sólido de 1 píxel */
+}
+        </pre>
+        <!-- Desafío: Añade bordes a un contenedor -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade bordes a un contenedor.
+        </div>
+
+        <!-- Márgenes y rellenos: Utilizados para el espacio exterior e interior de un elemento -->
+        <h2 id="margenes-rellenos">margin, padding - Márgenes y Rellenos</h2>
+        <p>
+            Las propiedades <code>margin</code> y <code>padding</code> se utilizan para el espacio exterior e interior de un elemento.
+        </p>
+        <pre>
+.elemento {
+    margin: 20px;  /* Uso: Espacio exterior */
+    padding: 10px;  /* Uso: Espacio interior */
+}
+        </pre>
+        <!-- Desafío: Ajusta los márgenes y el relleno de un elemento -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Ajusta los márgenes y el relleno de un elemento.
+        </div>
+
+        <!-- Flexbox: Utilizado para diseño flexible -->
+        <h2 id="flexbox">display: flex - Flexbox</h2>
+        <p>
+            La propiedad <code>display: flex</code> se utiliza para crear un diseño flexible.
+        </p>
+        <pre>
+.contenedor {
+    display: flex;  /* Uso: Contenedor flexible */
+    justify-content: center;  /* Uso: Centrar contenido horizontalmente */
+    align-items: center;  /* Uso: Centrar contenido verticalmente */
+}
+        </pre>
+        <!-- Desafío: Crea un contenedor flexible con elementos centrados -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un contenedor flexible con elementos centrados.
+        </div>
+
+        <!-- Grillas: Utilizado para diseño de grillas -->
+        <h2 id="grillas">display: grid - Grillas</h2>
+        <p>
+            La propiedad <code>display: grid</code> se utiliza para crear un diseño de grillas.
+        </p>
+        <pre>
+.contenedor {
+    display: grid;  /* Uso: Contenedor de grilla */
+    grid-template-columns: 1fr 1fr;  /* Uso: Dos columnas iguales */
+    gap: 20px;  /* Uso: Espacio entre elementos */
+}
+        </pre>
+        <!-- Desafío: Crea una grilla con dos columnas -->
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea una grilla con dos columnas.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+        <p>
+            Desarrollado por Abdiel Lopez - <a href="https://github.com/abdielLopezpy" target="_blank">Mi Perfil en GitHub</a>
+        </p>
+        <p>
+            <a href="https://github.com/abdielLopezpy/courses" target="_blank" class="btn btn-all">Todos los Cursos</a>
+        </p>
+
+    </div>
+</footer>
+
+</html>
