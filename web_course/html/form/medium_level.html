@@ -1,0 +1,198 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía de formulario intermedio en HTML con validaciones y elementos avanzados.">
+    <title>Formulario Intermedio HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            background: #e7e7e7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .footer-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .footer-content .btn-basic {
+            background-color: #6c757d;
+            color: #fff;
+        }
+        .footer-content .btn-basic:hover {
+            background-color: #5a6268;
+        }
+        .footer-content .btn-intermediate {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+        .footer-content .btn-intermediate:hover {
+            background-color: #138496;
+        }
+        .footer-content .btn-advanced {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .footer-content .btn-advanced:hover {
+            background-color: #218838;
+        }
+        .footer-content .btn-all {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .footer-content .btn-all:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Intermedio HTML</h1>
+        <p>Este formulario de nivel intermedio en HTML utiliza validaciones y elementos avanzados para proporcionar una experiencia robusta al usuario.</p>
+
+        <!-- Nombre de Usuario -->
+        <h2>Nombre de Usuario</h2>
+        <p>El campo para el nombre de usuario utiliza un patrón para asegurar un mínimo de 5 caracteres.</p>
+        <pre>
+&lt;label for="username"&gt;Nombre de Usuario:&lt;/label&gt;
+&lt;input type="text" id="username" name="username" pattern=".{5,}" title="Cinco o más caracteres" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade una validación para que el nombre de usuario no contenga caracteres especiales.
+        </div>
+
+        <!-- Correo Electrónico -->
+        <h2>Correo Electrónico</h2>
+        <p>El campo de correo electrónico valida automáticamente el formato del email.</p>
+        <pre>
+&lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade un mensaje personalizado que se muestre si el formato del correo electrónico no es válido.
+        </div>
+
+        <!-- Contraseña -->
+        <h2>Contraseña</h2>
+        <p>El campo de contraseña asegura un mínimo de 8 caracteres mediante el uso de un patrón.</p>
+        <pre>
+&lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+&lt;input type="password" id="password" name="password" pattern=".{8,}" title="Ocho o más caracteres" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade validaciones adicionales para requerir al menos un número y un carácter especial.
+        </div>
+
+        <!-- Confirmar Contraseña -->
+        <h2>Confirmar Contraseña</h2>
+        <p>Este campo verifica que la confirmación de la contraseña coincida con la contraseña ingresada.</p>
+        <pre>
+&lt;label for="confirmPassword"&gt;Confirmar Contraseña:&lt;/label&gt;
+&lt;input type="password" id="confirmPassword" name="confirmPassword" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Implementa la lógica para comparar y validar que ambas contraseñas coincidan usando JavaScript.
+        </div>
+
+        <!-- Lista de Datos -->
+        <h2>Lista de Datos</h2>
+        <p>La etiqueta <code>&lt;datalist&gt;</code> proporciona una lista de lenguajes de programación predefinidos.</p>
+        <pre>
+&lt;label for="programmingLanguages"&gt;Lenguajes de Programación:&lt;/label&gt;
+&lt;input list="languages" id="programmingLanguages" name="programmingLanguages"&gt;
+&lt;datalist id="languages"&gt;
+    &lt;option value="Python"&gt;
+    &lt;option value="JavaScript"&gt;
+    &lt;option value="Java"&gt;
+    &lt;option value="C++"&gt;
+    &lt;option value="Ruby"&gt;
+&lt;/datalist&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade más lenguajes de programación a la lista y valida que el campo no quede vacío.
+        </div>
+
+        <!-- Fecha de Nacimiento -->
+        <h2>Fecha de Nacimiento</h2>
+        <p>El campo de fecha asegura que el usuario seleccione una fecha de nacimiento.</p>
+        <pre>
+&lt;label for="birthday"&gt;Fecha de Nacimiento:&lt;/label&gt;
+&lt;input type="date" id="birthday" name="birthday" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Valida que la fecha seleccionada no sea futura.
+        </div>
+
+        <!-- Biografía -->
+        <h2>Biografía</h2>
+        <p>El campo de texto permite al usuario ingresar una breve biografía.</p>
+        <pre>
+&lt;label for="bio"&gt;Biografía:&lt;/label&gt;
+&lt;textarea id="bio" name="bio" rows="4" required&gt;&lt;/textarea&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade una validación para limitar el número de caracteres a 500.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Explora más temas avanzados de HTML y mejora tus habilidades con formularios web.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación de Reclutamiento">
+    <title>Aplicación de Reclutamiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, button {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicación de Reclutamiento</h1>
+        <p>Introduce tus datos personales para verificar si calificas.</p>
+
+        <form id="recruitmentForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" required>
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" step="0.1" min="1" required>
+
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura" step="0.1" min="1" required>
+
+            <button type="button" onclick="verificarCalificacion()">Verificar Calificación</button>
+        </form>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Resultado</h2>
+            <p id="nombreApellido"></p>
+            <p id="edadUsuario"></p>
+            <p id="imcResultado"></p>
+            <p id="calificacion"></p>
+        </div>
+    </div>
+
+    <script>
+        function verificarCalificacion() {
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var edad = document.getElementById('edad').value;
+            var peso = document.getElementById('peso').value;
+            var altura = document.getElementById('altura').value;
+
+            // Convertir altura de cm a m
+            altura = altura / 100;
+
+            // Calcular el IMC
+            var imc = peso / (altura * altura);
+            imc = imc.toFixed(2);
+
+            // Verificar calificación
+            var calificacion;
+            if (edad > 25) {
+                calificacion = 'No calificas porque tu edad es mayor a 25 años.';
+            } else if (imc > 22.00) {
+                calificacion = 'No calificas porque tu IMC es mayor a 22.00.';
+            } else {
+                calificacion = '¡Calificas para el reclutamiento!';
+            }
+
+            // Mostrar el resultado en el modal
+            document.getElementById('nombreApellido').innerText = 'Nombre: ' + nombre + ' ' + apellido;
+            document.getElementById('edadUsuario').innerText = 'Edad: ' + edad + ' años';
+            document.getElementById('imcResultado').innerText = 'Tu IMC es: ' + imc;
+            document.getElementById('calificacion').innerText = calificacion;
+
+            document.getElementById('resultModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('resultModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('resultModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

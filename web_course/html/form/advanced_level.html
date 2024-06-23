@@ -1,0 +1,216 @@
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!--
+ Copyright (c) 2024 Abdiel Lopez
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía avanzada de HTML para estudiantes, con ejemplos y desafíos.">
+    <title>Infografía Avanzada de Formularios HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            background: #e7e7e7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .footer-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .footer-content .btn-basic {
+            background-color: #6c757d;
+            color: #fff;
+        }
+        .footer-content .btn-basic:hover {
+            background-color: #5a6268;
+        }
+        .footer-content .btn-intermediate {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+        .footer-content .btn-intermediate:hover {
+            background-color: #138496;
+        }
+        .footer-content .btn-advanced {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .footer-content .btn-advanced:hover {
+            background-color: #218838;
+        }
+        .footer-content .btn-all {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .footer-content .btn-all:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Infografía Avanzada de Formularios HTML</h1>
+        <p>Esta infografía presenta elementos y atributos avanzados para formularios HTML, con ejemplos y desafíos para los estudiantes.</p>
+
+        <!-- Etiqueta Datalist -->
+        <h2>&lt;datalist&gt; - Lista de Datos</h2>
+        <p>La etiqueta <code>&lt;datalist&gt;</code> proporciona una lista de opciones predefinidas para un campo de entrada.</p>
+        <pre>
+&lt;label for="navegador"&gt;Elige tu navegador:&lt;/label&gt;
+&lt;input list="navegadores" id="navegador" name="navegador"&gt;
+&lt;datalist id="navegadores"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Safari"&gt;
+    &lt;option value="Edge"&gt;
+&lt;/datalist&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un campo de entrada con una lista de datos para seleccionar lenguajes de programación.
+        </div>
+
+        <!-- Etiqueta Output -->
+        <h2>&lt;output&gt; - Resultado</h2>
+        <p>La etiqueta <code>&lt;output&gt;</code> representa el resultado de un cálculo.</p>
+        <pre>
+&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+    &lt;input type="range" id="a" value="50"&gt; +
+    &lt;input type="number" id="b" value="50"&gt; =
+    &lt;output name="result" for="a b"&gt;100&lt;/output&gt;
+&lt;/form&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un formulario que calcule el área de un triángulo en base a la base y altura proporcionadas por el usuario.
+        </div>
+
+        <!-- Etiqueta Progress -->
+        <h2>&lt;progress&gt; - Barra de Progreso</h2>
+        <p>La etiqueta <code>&lt;progress&gt;</code> representa el progreso de una tarea en curso.</p>
+        <pre>
+&lt;label for="file"&gt;Subiendo archivo: &lt;/label&gt;
+&lt;progress id="file" value="32" max="100"&gt; 32% &lt;/progress&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Implementa una barra de progreso que se actualice automáticamente usando JavaScript.
+        </div>
+
+        <!-- Validación de Formularios -->
+        <h2>Validación de Formularios</h2>
+        <p>HTML5 proporciona varios atributos para la validación de formularios, como <code>required</code>, <code>pattern</code>, <code>min</code>, <code>max</code>, y más.</p>
+        <pre>
+&lt;form&gt;
+    &lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    &lt;br&gt;
+    &lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" pattern=".{8,}" title="Ocho o más caracteres" required&gt;
+    &lt;br&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un formulario de registro que valide el correo electrónico, la contraseña y que la confirmación de contraseña coincida con la contraseña ingresada.
+        </div>
+
+        <!-- Entrada de Fechas -->
+        <h2>Entrada de Fechas</h2>
+        <p>HTML5 introduce nuevos tipos de entrada para fechas y horas: <code>date</code>, <code>time</code>, <code>datetime-local</code>, <code>month</code>, y <code>week</code>.</p>
+        <pre>
+&lt;form&gt;
+    &lt;label for="birthday"&gt;Fecha de Nacimiento:&lt;/label&gt;
+    &lt;input type="date" id="birthday" name="birthday"&gt;
+    &lt;br&gt;
+    &lt;label for="appt"&gt;Hora de la Cita:&lt;/label&gt;
+    &lt;input type="time" id="appt" name="appt"&gt;
+    &lt;br&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un formulario que solicite la fecha y hora de un evento y que valide que la fecha no sea anterior a la fecha actual.
+        </div>
+
+        <!-- Subida de Archivos -->
+        <h2>Subida de Archivos</h2>
+        <p>La etiqueta <code>&lt;input type="file"&gt;</code> se utiliza para permitir a los usuarios seleccionar y subir archivos.</p>
+        <pre>
+&lt;form action="/upload" method="post" enctype="multipart/form-data"&gt;
+    &lt;label for="file"&gt;Elige un archivo:&lt;/label&gt;
+    &lt;input type="file" id="file" name="file"&gt;
+    &lt;br&gt;
+    &lt;button type="submit"&gt;Subir&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Crea un formulario que permita la subida de múltiples archivos y muestre una vista previa de los mismos antes de subirlos.
+        </div>
+        
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p>
+            ¡Has completado este desafío! Espero que hayas aprendido mucho. ¿Quieres ver más proyectos y ejercicios?
+        </p>
+
+    </div>
+</footer>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía de formulario básico en HTML con ejemplos y desafíos.">
+    <title>Formulario Básico HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            background: #e7e7e7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .challenge {
+            background: #e7f3ff;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .footer-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .footer-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .footer-content .btn-basic {
+            background-color: #6c757d;
+            color: #fff;
+        }
+        .footer-content .btn-basic:hover {
+            background-color: #5a6268;
+        }
+        .footer-content .btn-intermediate {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+        .footer-content .btn-intermediate:hover {
+            background-color: #138496;
+        }
+        .footer-content .btn-advanced {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .footer-content .btn-advanced:hover {
+            background-color: #218838;
+        }
+        .footer-content .btn-all {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .footer-content .btn-all:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Básico HTML</h1>
+        <p>Este formulario básico en HTML cubre los elementos esenciales para crear un formulario funcional.</p>
+
+        <!-- Etiqueta input -->
+        <h2>&lt;input&gt; - Campo de Entrada</h2>
+        <p>El campo de entrada básico se utiliza para recibir datos del usuario.</p>
+        <pre>
+&lt;label for="name"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="name" name="name" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade un campo de entrada para el apellido.
+        </div>
+
+        <!-- Etiqueta email -->
+        <h2>&lt;input type="email"&gt; - Correo Electrónico</h2>
+        <p>El campo de correo electrónico valida automáticamente que el formato del email sea correcto.</p>
+        <pre>
+&lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade un campo de entrada para el teléfono.
+        </div>
+
+        <!-- Etiqueta textarea -->
+        <h2>&lt;textarea&gt; - Área de Texto</h2>
+        <p>El área de texto permite al usuario ingresar múltiples líneas de texto.</p>
+        <pre>
+&lt;label for="message"&gt;Mensaje:&lt;/label&gt;
+&lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Limita el número de caracteres a 200.
+        </div>
+
+        <!-- Etiqueta button -->
+        <h2>&lt;button&gt; - Botón de Envío</h2>
+        <p>El botón de envío se utiliza para enviar el formulario.</p>
+        <pre>
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        </pre>
+        <div class="challenge">
+            <strong>Desafío:</strong> Añade un botón para restablecer el formulario.
+        </div>
+
+        <p><a href="#top">Volver al inicio</a></p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Explora más temas avanzados de HTML y mejora tus habilidades con formularios web.</p>
+        </div>
+    </footer>
+</body>
+</html>
